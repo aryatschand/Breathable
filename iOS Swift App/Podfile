@@ -6,4 +6,5 @@ target 'iOS Swift App' do
   use_frameworks!
 
   # Pods for iOS Swift App
+	pod 'Alamofire'
 end

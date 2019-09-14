@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		42A927FC232D17E50031A7B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A927FB232D17E50031A7B1 /* AppDelegate.swift */; };
-		42A927FE232D17E50031A7B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A927FD232D17E50031A7B1 /* ViewController.swift */; };
 		42A92801232D17E50031A7B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A927FF232D17E50031A7B1 /* Main.storyboard */; };
 		42A92803232D17E90031A7B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A92802232D17E90031A7B1 /* Assets.xcassets */; };
 		42A92806232D17E90031A7B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A92804232D17E90031A7B1 /* LaunchScreen.storyboard */; };
 		42A9280E232D28AB0031A7B1 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A9280D232D28AB0031A7B1 /* QuizViewController.swift */; };
 		42A92810232D382C0031A7B1 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A9280F232D382C0031A7B1 /* LineViewController.swift */; };
 		42A92816232D43050031A7B1 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A92815232D43050031A7B1 /* HelpTableViewController.swift */; };
+		42A9281C232D5E040031A7B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A92818232D5E030031A7B1 /* BluetoothSerial.swift */; };
+		42A9281E232D5E040031A7B1 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A9281A232D5E030031A7B1 /* ScannerViewController.swift */; };
+		42A92826232D61470031A7B1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A92824232D61470031A7B1 /* MBProgressHUD.m */; };
 		F1A6113ECC25C92171EA9E17 /* Pods_iOS_Swift_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195AFB7B42605F38C80D1601 /* Pods_iOS_Swift_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +24,6 @@
 		195AFB7B42605F38C80D1601 /* Pods_iOS_Swift_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Swift_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A927F8232D17E50031A7B1 /* iOS Swift App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Swift App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A927FB232D17E50031A7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42A927FD232D17E50031A7B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42A92800232D17E50031A7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42A92802232D17E90031A7B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A92805232D17E90031A7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,11 @@
 		42A9280D232D28AB0031A7B1 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		42A9280F232D382C0031A7B1 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
 		42A92815232D43050031A7B1 /* HelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelpTableViewController.swift; path = "/Users/AryaTschand/Documents/GitHub/H2Hacks/iOS Swift App/iOS Swift App/HelpTableViewController.swift"; sourceTree = "<absolute>"; };
+		42A92818232D5E030031A7B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		42A9281A232D5E030031A7B1 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		42A92824232D61470031A7B1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		42A92825232D61470031A7B1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		42A92827232D615E0031A7B1 /* iOS Swift App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS Swift App-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		7A3FDE93474CDAFB26908575 /* Pods-iOS Swift App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Swift App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Swift App/Pods-iOS Swift App.debug.xcconfig"; sourceTree = "<group>"; };
 		D9932D0615386747404E687B /* Pods-iOS Swift App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Swift App.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Swift App/Pods-iOS Swift App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,9 +90,13 @@
 		42A927FA232D17E50031A7B1 /* iOS Swift App */ = {
 			isa = PBXGroup;
 			children = (
+				42A92827232D615E0031A7B1 /* iOS Swift App-Bridging-Header.h */,
+				42A92825232D61470031A7B1 /* MBProgressHUD.h */,
+				42A92824232D61470031A7B1 /* MBProgressHUD.m */,
+				42A92818232D5E030031A7B1 /* BluetoothSerial.swift */,
+				42A9281A232D5E030031A7B1 /* ScannerViewController.swift */,
 				42A92815232D43050031A7B1 /* HelpTableViewController.swift */,
 				42A927FB232D17E50031A7B1 /* AppDelegate.swift */,
-				42A927FD232D17E50031A7B1 /* ViewController.swift */,
 				42A9280D232D28AB0031A7B1 /* QuizViewController.swift */,
 				42A9280F232D382C0031A7B1 /* LineViewController.swift */,
 				42A927FF232D17E50031A7B1 /* Main.storyboard */,
@@ -108,6 +118,7 @@
 				42A927F4232D17E50031A7B1 /* Sources */,
 				42A927F5232D17E50031A7B1 /* Frameworks */,
 				42A927F6232D17E50031A7B1 /* Resources */,
+				77DF4BC57328140D3F04B7C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +141,7 @@
 				TargetAttributes = {
 					42A927F7232D17E50031A7B1 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -183,6 +195,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		77DF4BC57328140D3F04B7C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOS Swift App/Pods-iOS Swift App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Swift App/Pods-iOS Swift App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -191,10 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A9280E232D28AB0031A7B1 /* QuizViewController.swift in Sources */,
-				42A927FE232D17E50031A7B1 /* ViewController.swift in Sources */,
+				42A9281C232D5E040031A7B1 /* BluetoothSerial.swift in Sources */,
 				42A92816232D43050031A7B1 /* HelpTableViewController.swift in Sources */,
 				42A92810232D382C0031A7B1 /* LineViewController.swift in Sources */,
 				42A927FC232D17E50031A7B1 /* AppDelegate.swift in Sources */,
+				42A9281E232D5E040031A7B1 /* ScannerViewController.swift in Sources */,
+				42A92826232D61470031A7B1 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +373,7 @@
 			baseConfigurationReference = 7A3FDE93474CDAFB26908575 /* Pods-iOS Swift App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMPVP9B9U3;
 				INFOPLIST_FILE = "iOS Swift App/Info.plist";
@@ -350,6 +383,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pec.iOS-Swift-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS Swift App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,6 +395,7 @@
 			baseConfigurationReference = D9932D0615386747404E687B /* Pods-iOS Swift App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BMPVP9B9U3;
 				INFOPLIST_FILE = "iOS Swift App/Info.plist";
@@ -369,6 +405,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pec.iOS-Swift-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS Swift App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
