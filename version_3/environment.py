@@ -14,14 +14,14 @@ def get_timestamp():
     return datetime.now().strftime(("%Y-%m-%d %H:%M:%S"))
 
 x = {
-        "fname": "Bunnsrtarsarstarstarsy",
-        "lname": "Easter",
+        "fname": "Doug",
+        "lname": "Farrarstarstararstnetaeintieoarntiosearnteioarsnstarstell",
         "timestamp": get_timestamp(),
     }
 # Data to serve with our API
 PEOPLE = {
-    get_timestamp: x,
-    "sup bitch": {
+    "Farrell": x,
+    "Brockman": {
         "fname": "Kent",
         "lname": "Bartart",
         "timestamp": get_timestamp(),
@@ -33,12 +33,6 @@ PEOPLE = {
     },
 }
 
-def data(raw_data):
-    data_list = raw_data.split(',')
-    temp = data_list[0]
-    humidity = data_list[1]
-    particulate = data_list[2]
-
 
 def read_all():
     """
@@ -48,7 +42,7 @@ def read_all():
     :return:        json string of list of people
     """
     # Create the list of people from our data
-    return [PEOPLE[key] for key in PEOPLE.keys()]
+    return [PEOPLE[key] for key in sorted(PEOPLE.keys())]
 
 
 def read_one(lname):

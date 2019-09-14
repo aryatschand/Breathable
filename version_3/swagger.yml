@@ -12,9 +12,9 @@ basePath: /api
 
 # Paths supported by the server application
 paths:
-  /people:
+  /environment:
     get:
-      operationId: people.read_all
+      operationId: environment.read_all
       tags:
         - People
       summary: Read the entire list of people
@@ -44,8 +44,10 @@ paths:
                 timestamp:
                   type: string
 
+
+
     post:
-      operationId: people.create
+      operationId: environment.create
       tags:
         - people
       summary: Create a person and add it to the people list
