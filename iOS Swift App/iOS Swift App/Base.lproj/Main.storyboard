@@ -10,32 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Swift_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nr-BB-9Yh">
-                                <rect key="frame" x="173" y="695" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Quiz"/>
-                                <connections>
-                                    <segue destination="ybb-N5-K4Q" kind="show" id="UkW-u4-IQ0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Wwr-2R-EZh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1762.3188405797102" y="110.49107142857143"/>
-        </scene>
         <!--Quiz View Controller-->
         <scene sceneID="ObA-6M-vOq">
             <objects>
@@ -108,17 +82,80 @@
             </objects>
             <point key="canvasLocation" x="2671.0144927536235" y="108.48214285714285"/>
         </scene>
+        <!--Help Table View Controller-->
+        <scene sceneID="Cht-Aq-fJ7">
+            <objects>
+                <tableViewController id="TFN-Ei-TfN" customClass="HelpTableViewController" customModule="iOS_Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cqZ-FI-GM9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="row" id="pr1-oS-0FU">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pr1-oS-0FU" id="o9I-pj-XS6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TFN-Ei-TfN" id="ZRb-sD-aQQ"/>
+                            <outlet property="delegate" destination="TFN-Ei-TfN" id="KwX-Yn-LFx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RwE-I8-9HB">
+                        <barButtonItem key="rightBarButtonItem" title="Start Quiz" id="vnv-Tc-D1P">
+                            <connections>
+                                <segue destination="ybb-N5-K4Q" kind="show" id="KR4-gt-IIq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nqz-QX-T3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="108"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ccl-Pw-Ui9">
+            <objects>
+                <viewController id="efg-CF-S0D" customClass="LineViewController" customModule="iOS_Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQS-hc-tNs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-xM-jl3">
+                                <rect key="frame" x="87" y="273" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Xn-ZR-eil"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="AG5-qn-zLJ"/>
+                    <navigationItem key="navigationItem" id="0EW-Ul-dog"/>
+                    <connections>
+                        <outlet property="imageview" destination="Z9y-xM-jl3" id="rRy-Mu-6ca"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcR-Gg-5IY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="-637.5"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OSa-p9-wJO">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="djb-rQ-Roi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wtt-8d-suB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="k34-RT-o2A" kind="relationship" relationship="viewControllers" id="BC4-uv-7Ee"/>
+                        <segue destination="efg-CF-S0D" kind="relationship" relationship="viewControllers" id="TzH-ay-njR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9Z-re-Atq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,7 +174,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Rc-3h-7yb"/>
+                        <segue destination="TFN-Ei-TfN" kind="relationship" relationship="rootViewController" id="4Oc-C2-woa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1v8-ZS-EKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
