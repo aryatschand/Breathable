@@ -46,18 +46,18 @@ class LineViewController: UIViewController, BluetoothSerialDelegate {
     
     @IBAction func SeverityChanged(_ sender: Any) {
         if Segmented.selectedSegmentIndex == 0 {
-            printMessagesForUser(parameters: "Temperature")
+            //printMessagesForUser(parameters: "Temperature")
             getImageDB(value2: "temperatureGraph")
         } else if Segmented.selectedSegmentIndex == 1 {
-            printMessagesForUser(parameters: "Humidity")
+            //printMessagesForUser(parameters: "Humidity")
             getImageDB(value2: "humidityGraph")
             
         } else if Segmented.selectedSegmentIndex == 2 {
-            printMessagesForUser(parameters: "Air")
+            //printMessagesForUser(parameters: "Air")
             getImageDB(value2: "airGraph")
             
         } else if Segmented.selectedSegmentIndex == 3 {
-            printMessagesForUser(parameters: "Severity")
+            //printMessagesForUser(parameters: "Severity")
             getImageDB(value2: "severityGraph")
         }
     }
@@ -95,10 +95,10 @@ class LineViewController: UIViewController, BluetoothSerialDelegate {
             let value = snapshot.value as? NSDictionary
             var temp: String = value?["severityScore"] as! String
             self.Severity.text = "Severity Score = \(temp)"
-            if Int(temp)! < 30 {
+            if Int(temp)! < 20 {
                 self.Severity.textColor = UIColor.green
-            } else if Int(temp)! < 60 {
-                self.Severity.textColor = UIColor.yellow
+            } else if Int(temp)! < 40 {
+                self.Severity.textColor = UIColor.orange
             } else {
                 self.Severity.textColor = UIColor.red
             }
@@ -176,18 +176,18 @@ class LineViewController: UIViewController, BluetoothSerialDelegate {
     func serialDidReceiveString(_ message: String) {
         printMessagesForUser(parameters: message)
         if Segmented.selectedSegmentIndex == 0 {
-            printMessagesForUser(parameters: "Temperature")
+            //printMessagesForUser(parameters: "Temperature")
             getImageDB(value2: "temperatureGraph")
         } else if Segmented.selectedSegmentIndex == 1 {
-            printMessagesForUser(parameters: "Humidity")
+            //printMessagesForUser(parameters: "Humidity")
             getImageDB(value2: "humidityGraph")
             
         } else if Segmented.selectedSegmentIndex == 2 {
-            printMessagesForUser(parameters: "Air")
+            //printMessagesForUser(parameters: "Air")
             getImageDB(value2: "airGraph")
             
         } else if Segmented.selectedSegmentIndex == 3 {
-            printMessagesForUser(parameters: "Severity")
+            //printMessagesForUser(parameters: "Severity")
             getImageDB(value2: "severityGraph")
         }
         updateTitle()

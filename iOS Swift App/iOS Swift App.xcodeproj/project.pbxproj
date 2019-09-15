@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		425BF3F0232DA58D0084C44D /* ACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425BF3EF232DA58D0084C44D /* ACViewController.swift */; };
 		425BF3F4232DAC5C0084C44D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 425BF3F3232DAC5C0084C44D /* GoogleService-Info.plist */; };
+		425BF3F6232DB97D0084C44D /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 425BF3F5232DB97D0084C44D /* circle.png */; };
 		42A927FC232D17E50031A7B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A927FB232D17E50031A7B1 /* AppDelegate.swift */; };
 		42A92801232D17E50031A7B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A927FF232D17E50031A7B1 /* Main.storyboard */; };
 		42A92803232D17E90031A7B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A92802232D17E90031A7B1 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		195AFB7B42605F38C80D1601 /* Pods_iOS_Swift_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Swift_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		425BF3EF232DA58D0084C44D /* ACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACViewController.swift; sourceTree = "<group>"; };
 		425BF3F3232DAC5C0084C44D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		425BF3F5232DB97D0084C44D /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		42A927F8232D17E50031A7B1 /* iOS Swift App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Swift App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A927FB232D17E50031A7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A92800232D17E50031A7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		42A927FA232D17E50031A7B1 /* iOS Swift App */ = {
 			isa = PBXGroup;
 			children = (
+				425BF3F5232DB97D0084C44D /* circle.png */,
 				42A92827232D615E0031A7B1 /* iOS Swift App-Bridging-Header.h */,
 				42A92825232D61470031A7B1 /* MBProgressHUD.h */,
 				42A92824232D61470031A7B1 /* MBProgressHUD.m */,
@@ -176,6 +179,7 @@
 			files = (
 				42A92806232D17E90031A7B1 /* LaunchScreen.storyboard in Resources */,
 				425BF3F4232DAC5C0084C44D /* GoogleService-Info.plist in Resources */,
+				425BF3F6232DB97D0084C44D /* circle.png in Resources */,
 				42A92803232D17E90031A7B1 /* Assets.xcassets in Resources */,
 				42A92801232D17E50031A7B1 /* Main.storyboard in Resources */,
 			);

@@ -11,12 +11,15 @@ import Firebase
 
 class ACViewController: UIViewController {
 
+    
+    @IBOutlet weak var AcScore: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        printMessagesForUser(parameters: "Air")
+        AcScore.text = "\(String(Int.random(in: 60 ..< 66)))%"
     }
     
     func printMessagesForUser(parameters: String) {

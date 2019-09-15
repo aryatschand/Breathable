@@ -14,9 +14,9 @@ import FirebaseDatabase
 
 class HelpTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 
-    var names: [String] = ["WildLife", "Ocean"]
-    var numbers: [String] = ["7325356202", "7324465525"]
-    var emails: [String] = ["arya@voicesaver.com", "arya@gmail.com"]
+    var names: [String] = ["AboutGrownNYC", "Green New Yorkers", "NYC Grassroots Alliance"]
+    var numbers: [String] = ["(718)-637-9134", "(917)-348-1349", "(718)-193-5839"]
+    var emails: [String] = ["grownyc@gmail.com", "greenny@gmail.com", "grassrootsnyc@outlook.com"]
     var locManager = CLLocationManager()
     var currentLocation: CLLocation!
     var ref: DatabaseReference!
