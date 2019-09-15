@@ -17,6 +17,7 @@ class QuizViewController: UIViewController {
     var AnsThree: [String] = ["Josh", "16"]
     var AnsFour: [String] = ["Varun", "15"]
     var answers: [Int] = [1, 3]
+    var right: Int = 0
     
     @IBOutlet weak var questionlabel: UILabel!
     
@@ -53,6 +54,7 @@ class QuizViewController: UIViewController {
     @IBAction func OneClick(_ sender: Any) {
         if answers[questionNumber] == 1 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -63,6 +65,7 @@ class QuizViewController: UIViewController {
     @IBAction func TwoClick(_ sender: Any) {
         if answers[questionNumber] == 2 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -73,6 +76,7 @@ class QuizViewController: UIViewController {
     @IBAction func ThreeClick(_ sender: Any) {
         if answers[questionNumber] == 3 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -83,6 +87,7 @@ class QuizViewController: UIViewController {
     @IBAction func FourClick(_ sender: Any) {
         if answers[questionNumber] == 4 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -106,9 +111,10 @@ class QuizViewController: UIViewController {
             Two.isEnabled = false
             Three.isEnabled = false
             Four.isEnabled = false
-            questionlabel.text = "Try again"
+            questionlabel.text = "Score = \(right)/5. Reset to try again"
             reset.isEnabled = true
             reset.isHidden = false
+            right = 0
         }
         
     }

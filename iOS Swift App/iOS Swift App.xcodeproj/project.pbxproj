@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425BF3F0232DA58D0084C44D /* ACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425BF3EF232DA58D0084C44D /* ACViewController.swift */; };
+		425BF3F4232DAC5C0084C44D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 425BF3F3232DAC5C0084C44D /* GoogleService-Info.plist */; };
 		42A927FC232D17E50031A7B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A927FB232D17E50031A7B1 /* AppDelegate.swift */; };
 		42A92801232D17E50031A7B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A927FF232D17E50031A7B1 /* Main.storyboard */; };
 		42A92803232D17E90031A7B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A92802232D17E90031A7B1 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		195AFB7B42605F38C80D1601 /* Pods_iOS_Swift_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Swift_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		425BF3EF232DA58D0084C44D /* ACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACViewController.swift; sourceTree = "<group>"; };
+		425BF3F3232DAC5C0084C44D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42A927F8232D17E50031A7B1 /* iOS Swift App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Swift App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A927FB232D17E50031A7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A92800232D17E50031A7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,9 +103,11 @@
 				42A927FB232D17E50031A7B1 /* AppDelegate.swift */,
 				42A9280D232D28AB0031A7B1 /* QuizViewController.swift */,
 				42A9280F232D382C0031A7B1 /* LineViewController.swift */,
+				425BF3EF232DA58D0084C44D /* ACViewController.swift */,
 				42A927FF232D17E50031A7B1 /* Main.storyboard */,
 				42A92802232D17E90031A7B1 /* Assets.xcassets */,
 				42A92804232D17E90031A7B1 /* LaunchScreen.storyboard */,
+				425BF3F3232DAC5C0084C44D /* GoogleService-Info.plist */,
 				42A92807232D17E90031A7B1 /* Info.plist */,
 			);
 			path = "iOS Swift App";
@@ -118,7 +124,7 @@
 				42A927F4232D17E50031A7B1 /* Sources */,
 				42A927F5232D17E50031A7B1 /* Frameworks */,
 				42A927F6232D17E50031A7B1 /* Resources */,
-				77DF4BC57328140D3F04B7C6 /* [CP] Embed Pods Frameworks */,
+				C9A0DA876AF22D22EDE2A174 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A92806232D17E90031A7B1 /* LaunchScreen.storyboard in Resources */,
+				425BF3F4232DAC5C0084C44D /* GoogleService-Info.plist in Resources */,
 				42A92803232D17E90031A7B1 /* Assets.xcassets in Resources */,
 				42A92801232D17E50031A7B1 /* Main.storyboard in Resources */,
 			);
@@ -195,18 +202,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77DF4BC57328140D3F04B7C6 /* [CP] Embed Pods Frameworks */ = {
+		C9A0DA876AF22D22EDE2A174 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS Swift App/Pods-iOS Swift App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -224,6 +235,7 @@
 				42A9281C232D5E040031A7B1 /* BluetoothSerial.swift in Sources */,
 				42A92816232D43050031A7B1 /* HelpTableViewController.swift in Sources */,
 				42A92810232D382C0031A7B1 /* LineViewController.swift in Sources */,
+				425BF3F0232DA58D0084C44D /* ACViewController.swift in Sources */,
 				42A927FC232D17E50031A7B1 /* AppDelegate.swift in Sources */,
 				42A9281E232D5E040031A7B1 /* ScannerViewController.swift in Sources */,
 				42A92826232D61470031A7B1 /* MBProgressHUD.m in Sources */,
@@ -381,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "pec.iOS-Swift-App";
+				PRODUCT_BUNDLE_IDENTIFIER = arya.breathable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS Swift App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -403,7 +415,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "pec.iOS-Swift-App";
+				PRODUCT_BUNDLE_IDENTIFIER = arya.breathable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS Swift App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

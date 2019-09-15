@@ -10,18 +10,20 @@ import Foundation
 import MessageUI
 import MapKit
 import CoreLocation
+import FirebaseDatabase
 
-class HelpTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, CLLocationManagerDelegate {
+class HelpTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 
     var names: [String] = ["WildLife", "Ocean"]
     var numbers: [String] = ["7325356202", "7324465525"]
     var emails: [String] = ["arya@voicesaver.com", "arya@gmail.com"]
     var locManager = CLLocationManager()
     var currentLocation: CLLocation!
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        printMessagesForUser()
+        //printMessagesForUser(parameters: "hello")
         locManager.requestWhenInUseAuthorization()
         
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
@@ -29,8 +31,8 @@ class HelpTableViewController: UITableViewController, MFMailComposeViewControlle
             guard let currentLocation = locManager.location else {
                 return
             }
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
+            //print(currentLocation.coordinate.latitude)
+            //print(currentLocation.coordinate.longitude)
             
         }
         
@@ -48,12 +50,20 @@ class HelpTableViewController: UITableViewController, MFMailComposeViewControlle
     var longitude: Double = 0
     var addressString : String = ""
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    func getDB(value: String) {
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            var temp: String = value?["value"] as! String
+        })
     }
     
-    func printMessagesForUser() -> Void {
-            let json = ["user":"larry"]
+    override func viewWillAppear(_ animated: Bool) {
+        ref = Database.database().reference()
+    }
+    
+    func printMessagesForUser(parameters: String) -> Void {
+            let json = [parameters]
             do {
                 let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
                 
@@ -65,16 +75,10 @@ class HelpTableViewController: UITableViewController, MFMailComposeViewControlle
                 request.httpBody = jsonData
                 
                 let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
-                    if error != nil{
-                        print("Error -> \(error)")
-                        return
-                    }
-                    do {
-                        let result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:AnyObject]
-                        print("Result -> \(result)")
-                        
-                    } catch {
-                        print("Error -> \(error)")
+                    if let string = String(data: data!, encoding: .utf8) {
+                        print(string)
+                    } else {
+                        print("not a valid UTF-8 sequence")
                     }
                 }
                 
@@ -123,30 +127,4 @@ class HelpTableViewController: UITableViewController, MFMailComposeViewControlle
         self.present(composeVC, animated: true, completion: nil)
     }
 
-}
-
-extension CLPlacemark {
-    
-    var compactAddress: String? {
-        if let name = name {
-            var result = name
-            
-            if let street = thoroughfare {
-                result += ", \(street)"
-            }
-            
-            if let city = locality {
-                result += ", \(city)"
-            }
-            
-            if let country = country {
-                result += ", \(country)"
-            }
-            
-            return result
-        }
-        
-        return nil
-    }
-    
 }
