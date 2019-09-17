@@ -10,13 +10,15 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
-    var questions: [String] = ["What's your name?", "How old are you"]
+    var questions: [String] = ["The number of hazardous air pollutants is __ ?", "Which of the following is not a negative effect of polluted air?", "Which of the following causes the greatest air pollution?", "Which of the following reduces air pollutants?", "Which pollutants come from mobile sources?"]
     var questionNumber = 0
-    var AnsOne: [String] = ["Arya", "17"]
-    var AnsTwo: [String] = ["Lyndon", "18"]
-    var AnsThree: [String] = ["Josh", "16"]
-    var AnsFour: [String] = ["Varun", "15"]
-    var answers: [Int] = [1, 3]
+    var AnsOne: [String] = ["10", "Wheezing", "City Buses", "Busses", "NO2"]
+
+    var AnsTwo: [String] = ["25", "Coughing", "Trucks", "Lead", "Hydrocarbons"]
+    var AnsThree: [String] = ["200", "Asthma", "Cars", "Private Cars", "CO"]
+    var AnsFour: [String] = ["2000", "Obesity", "Power Plants", "Flossing", "AoTA"]
+    var answers: [Int] = [3, 4, 3, 1, 4]
+    var right: Int = 0
     
     @IBOutlet weak var questionlabel: UILabel!
     
@@ -53,6 +55,7 @@ class QuizViewController: UIViewController {
     @IBAction func OneClick(_ sender: Any) {
         if answers[questionNumber] == 1 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -63,6 +66,7 @@ class QuizViewController: UIViewController {
     @IBAction func TwoClick(_ sender: Any) {
         if answers[questionNumber] == 2 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -73,6 +77,7 @@ class QuizViewController: UIViewController {
     @IBAction func ThreeClick(_ sender: Any) {
         if answers[questionNumber] == 3 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -83,6 +88,7 @@ class QuizViewController: UIViewController {
     @IBAction func FourClick(_ sender: Any) {
         if answers[questionNumber] == 4 {
             giveAlert(correct: true)
+            right += 1
         } else {
             giveAlert(correct: false)
         }
@@ -106,9 +112,10 @@ class QuizViewController: UIViewController {
             Two.isEnabled = false
             Three.isEnabled = false
             Four.isEnabled = false
-            questionlabel.text = "Try again"
+            questionlabel.text = "Score = \(right)/5. Reset to try again"
             reset.isEnabled = true
             reset.isHidden = false
+            right = 0
         }
         
     }
