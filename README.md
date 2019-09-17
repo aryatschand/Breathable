@@ -3,7 +3,7 @@ Created by Arya Tschand, Lyndon Puzon, Joshua Rakovitsky and Varun Tupuri 9/14/1
 
 Breathable is a mobile app combined with a web server that uses real time arduino sensor data and gps tracking information to determine an overall air quality score sing machine learning
 
-##Inspiration
+## Inspiration
 Two of our team members have often visited India and noticed that the air quality is significantly worse in many urban areas than the U.S. and other Western countries. There is no readily available and cost efficient way for people to understand the poor quality of the air in and around their home. Our project aims to combat this issue of providing an easy to use interface to not only determine the severity of the situation in their house but also to diagnose potential causes and provide solutions.
 
 ##What it does
