@@ -1,10 +1,8 @@
-import base64
-import requests, json
+import requests, json 
 import matplotlib.pyplot as plt
 import base64
 import pyrebase
-from flask import Flask, jsonify, request, render_template
-import random as r
+
 
 config = {
   "apiKey": "AIzaSyCMIKySyTQfzDtZKfdp9bAFR-4mx44nvb8",
@@ -125,48 +123,7 @@ def returnTotalScore(insideInfo):
     return x
 print (returnTotalScore([1.5, 45, 73]))
 
-# Cead the swagger.yml file to configure the endpoints
 
-#answer = ''
-app = Flask(__name__)
-# Create a URL route in our application for "/"
-@app.route('/api', methods=['POST'])
-def addOne():
-    #request.get_data()
-  #  print(request.data['data'].decode(encoding='UTF-8'))
-   # return jsonify(request.data.decode(encoding='UTF-8').['data'])
-    request.get_data()
-    #matter, humidity, temp
-    print(request.data)
-    data_list = request.data.decode("utf-8")
-    data_list = data_list.replace("\\r", "")
-    data_list = data_list.replace("\\n", "")
-    data_list = data_list.replace("{", "")
-    data_list = data_list.replace("[", "")
-    data_list = data_list.replace("]", "")
-    data_list = data_list.replace("}", "")
-    data_list = data_list.replace("\n", "")
-    data_list = data_list.replace(" ", "")
-    data_list = data_list.replace("\"", "")
-    data_list = data_list.replace("\\.", "")
-    data_list = data_list.split(',')
-    for i in range(len(data_list)):
-        data_list[i]=float(data_list[i])
-    matter = list()
-    humidity = list()
-    temp = list()
-    for i in range(10):
-        matter.append(r.randint(75, 125)/100.0)
-        humidity.append(r.randint(35,55))
-        temp.append(r.randint(70,75))
-    returnTotalScore(data_list)
-    return 'worked'
-    #answer = value
-    
-    return 'sup'
-##@app.route('/hello')
-##def workplz():
-##    print(answer)
-##    return render_template('home.html', value=answer)
-if __name__ == "__main__":
-    app.run(debug=True)
+#temperature return graph
+
+
